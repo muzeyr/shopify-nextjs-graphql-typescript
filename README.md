@@ -1,37 +1,60 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Project Name
 
-Original Project can be found here: [Next.js Ecommerce](https://github.com/vercel/commerce)
-All credits for the design and type of the architecture goes to
-mantainers of this project
+🚀 A brief description of your project.
+
+## Technologies Used
+
+🔧 Built with Next.js, TypeScript, GraphQL, and Shopify services.
 
 ## Getting Started
 
-In the file called:
+⚙️ These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+
+### Prerequisites
+
+✅ Node.js and npm should be installed on your machine.
+
+### Installation
+
+📥 Clone the repository:
+
+```shell
+git clone https://github.com/your-username/your-repo.git
 ```
-.env.local[duplicate]
-```
 
-remove [duplicate] so file is called ```.env.local```
+📦 Install the dependencies:
 
-Install the dependencies:
-
-```bash
+```shell
 npm install
 ```
 
-Run the development server:
+Configuration
+⚙️ Configure the necessary environment variables:
 
-```bash
+Create a .env file in the project root directory.
+Add the required environment variables:
+
+```shell
+npm install
+```
+Configuration
+⚙️ Configure the necessary environment variables:
+
+Create a .env file in the project root directory.
+Add the required environment variables:
+
+```
+NEXT_PUBLIC_SHOPIFY_STOREFRONT_ACCESS_TOKEN=
+STORE_NAME=
+API_URL=
+PLACE_HOLDER_IMAGE=
+```
+
+Running the Project
+🏃 Start the development server:
+
+```shell
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-
-
-
-# Docker
-docker build -t nu3-shopify .
-
-
-docker run -p 3000:3000 nu3-shopify
+🌐 Open your browser and navigate to http://localhost:3000 to see the project in action.
