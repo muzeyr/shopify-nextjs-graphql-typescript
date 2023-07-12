@@ -1861,7 +1861,7 @@
   "resolved" "https://registry.npmjs.org/csstype/-/csstype-3.0.10.tgz"
   "version" "3.0.10"
 
-"cypress@*", "cypress@^4.2.0":
+"cypress@*":
   "integrity" "sha512-8LdreL91S/QiTCLYLNbIjLL8Ht4fJmu/4HGLxUI20Tc7JSfqEfCmXELrRfuPT0kjosJwJJZacdSji9XSRkPKUw=="
   "resolved" "https://registry.npmjs.org/cypress/-/cypress-4.2.0.tgz"
   "version" "4.2.0"
