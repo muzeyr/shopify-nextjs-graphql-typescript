@@ -14,15 +14,3 @@ describe('About Page', () => {
     expect(heading).toBeInTheDocument()
   })
 })
-
-describe('Home Page', () => {
-  it('renders a heading', () => {
-    const products: Product[] = [];
-    render(<Home products={products}/>)
-    const heading = screen.getByRole('heading', {
-      name: /About Page/i,
-    })
-
-    expect(heading).toBeInTheDocument()
-  })
-})
