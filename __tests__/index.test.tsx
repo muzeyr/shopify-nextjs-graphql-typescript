@@ -1,10 +1,24 @@
 import { render, screen } from '@testing-library/react'
 import About from '../pages/about'
 import '@testing-library/jest-dom'
+import Home from '../pages/index'
+import { Product } from '@common/types/product'
 
-describe('Home', () => {
+describe('About Page', () => {
   it('renders a heading', () => {
     render(<About />)
+    const heading = screen.getByRole('heading', {
+      name: /About Page/i,
+    })
+
+    expect(heading).toBeInTheDocument()
+  })
+})
+
+describe('Home Page', () => {
+  it('renders a heading', () => {
+    const products: Product[] = [];
+    render(<Home products={products}/>)
     const heading = screen.getByRole('heading', {
       name: /About Page/i,
     })

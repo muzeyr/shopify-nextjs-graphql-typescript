@@ -1,18 +1,14 @@
 
-import cn from 'classnames'
 import { FC, useState } from 'react'
 import { Container } from '@components/ui'
 import { Product } from '@common/types/product'
 import { ProductCard } from "@components/product"
-import { Choices, getVariant } from '../helpers'
 
 interface Props {
   products: Product[]
 }
 
 const ProductList: FC<Props> = ({ products }) => {
-  const [ choices, setChoices ] = useState<Choices>({})
-  const [ isLoading, setIsLoading ] = useState(false)
   const [sortBy, setSortBy] = useState<string>(''); // varsayılan olarak boş bir sıralama seçeneği
 
 

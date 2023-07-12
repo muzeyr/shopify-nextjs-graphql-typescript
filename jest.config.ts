@@ -13,14 +13,14 @@ const customJestConfig = {
   testEnvironment: "jest-environment-jsdom",
   modulePathIgnorePatterns: ["cypress","<rootDir>/dist/"],
   moduleNameMapper: {
-    "^@common": ["lib/common"],
-    "^@common/": ["lib/common/*"],
-    "^@lib": ["lib/shopify"],
-    "^@lib/*": ["lib/shopify/*"],
-    "^@components/$": ["components/*"],
-    "^@assets/*": ["assets/*"],
-
-  },
+    "^@common": ["<rootDir>lib/common"],
+    "^@common/": ["<rootDir>lib/common/*"],
+    "^@lib": ["<rootDir>lib/shopify"],
+    "^@lib/*": ["<rootDir>lib/shopify/*"],
+    "^@components$": "<rootDir>/components/*",
+    "^@assets$": "<rootDir>/assets/*",
+    "^@shared$": "<rootDir>/shared/"
+  }
   
 };
 

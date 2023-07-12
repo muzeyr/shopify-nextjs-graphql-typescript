@@ -7,9 +7,8 @@ import Image from "next/image"
 
 interface Props {
   product: Product
-  variant?: "simple" | "slim"
 }
-const ProductCard: FC<Props> = ({product, variant = "simple"}) => {
+const ProductCard: FC<Props> = ({product}) => {
 
   return (
     <Link

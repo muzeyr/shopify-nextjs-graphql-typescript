@@ -1,6 +1,6 @@
 
 import cn from 'classnames'
-import { FC, useState } from 'react'
+import { FC } from 'react'
 import s from './ProductView.module.css'
 import { Container } from '@components/ui'
 import Image from "next/image"
@@ -12,8 +12,6 @@ interface Props {
 }
 
 const ProductView: FC<Props> = ({ product }) => {
-  const [ isLoading, setIsLoading ] = useState(false)
-
   return (
     <Container>
       <div className={cn(s.root, 'fit', "mb-5")}>

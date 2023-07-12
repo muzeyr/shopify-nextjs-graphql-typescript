@@ -12,7 +12,7 @@ const ProductSlider: FC = ({children}) => {
     slideChanged(s) {
       setCurrentSlide(s.details().relativeSlide)
     },
-  })
+  });
 
   return (
     <div className={s.root}>

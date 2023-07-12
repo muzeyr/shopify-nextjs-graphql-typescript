@@ -1,4 +1,3 @@
-
 import {
   createContext,
   FC,
@@ -7,8 +6,6 @@ import {
   useMemo } from "react"
 
 export interface StateModifiers {
-  openSidebar: () => void
-  closeSidebar: () => void
 }
 
 export interface StateValues {
@@ -16,8 +13,6 @@ export interface StateValues {
 }
 
 const stateModifiers = {
-  openSidebar: () => {},
-  closeSidebar: () => {}
 }
 
 const initialState = { isSidebarOpen: false }
