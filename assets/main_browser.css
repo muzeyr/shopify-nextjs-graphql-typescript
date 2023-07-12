@@ -4,11 +4,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 @layer components {
   .fit {
     min-height: calc(100vh - 88px)
   }
 }
-
 /*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIm1haW4uY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBIiwiZmlsZSI6Im1haW5fYnJvd3Nlci5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyJcbkBpbXBvcnQgXCIuL2Jhc2UuY3NzXCI7XG5cbkB0YWlsd2luZCBiYXNlO1xuQHRhaWx3aW5kIGNvbXBvbmVudHM7XG5AdGFpbHdpbmQgdXRpbGl0aWVzO1xuXG5AbGF5ZXIgY29tcG9uZW50cyB7XG4gIC5maXQge1xuICAgIG1pbi1oZWlnaHQ6IGNhbGMoMTAwdmggLSA4OHB4KVxuICB9XG59XG4iXX0= */
