@@ -24,7 +24,6 @@ const fetchApi = async <T>({
   if (errors) {
     throw new Error(errors[0].message ?? errors.message)
   }
-
   return { data }
 }
 

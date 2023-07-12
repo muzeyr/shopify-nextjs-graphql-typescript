@@ -1,60 +1,40 @@
-# Project Name
+# Boilerplate-Next 
 
-🚀 A brief description of your project.
+Follow along with how I made this via the step-by-step post here on [Medium](https://wk0.medium.com/create-a-typescript-nextjs-project-with-jest-cypress-adbbcf237747)
 
-## Technologies Used
+Bare-bones
 
-🔧 Built with Next.js, TypeScript, GraphQL, and Shopify services.
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/wk0/boilerplate-next)
 
-## Getting Started
+--- 
 
-⚙️ These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+With TailwindCSS 
 
-### Prerequisites
+Step by step guide to setting up with Tailwind: [Medium](https://wk0.medium.com/adding-tailwind-to-a-nextjs-typescript-project-d1eba5699c4d)
 
-✅ Node.js and npm should be installed on your machine.
+[![Deploy with Vercel](https://vercel.com/button)](https://github.com/wk0/boilerplate-next/tree/tailwind)
 
-### Installation
+--- 
 
-📥 Clone the repository:
+With Web3  
 
-```shell
-git clone https://github.com/your-username/your-repo.git
-```
+Step by step guide to setting up with Web3: [Medium](https://wk0.medium.com/adding-web3-to-our-nextjs-typescript-project-861e9ed5feaf)
 
-📦 Install the dependencies:
+[![Deploy with Vercel](https://vercel.com/button)](https://github.com/wk0/boilerplate-next/tree/web3-eth)
 
-```shell
-npm install
-```
+---
 
-Configuration
-⚙️ Configure the necessary environment variables:
+As a Monorepo
 
-Create a .env file in the project root directory.
-Add the required environment variables:
+How to convert: [Medium](https://medium.com/p/bf4007fdfa87)
 
-```shell
-npm install
-```
-Configuration
-⚙️ Configure the necessary environment variables:
+[![Deploy with Vercel](https://vercel.com/button)](https://github.com/wk0/boilerplate-next/tree/as-workspace)
 
-Create a .env file in the project root directory.
-Add the required environment variables:
 
-```
-NEXT_PUBLIC_SHOPIFY_STOREFRONT_ACCESS_TOKEN=
-STORE_NAME=
-API_URL=
-PLACE_HOLDER_IMAGE=
-```
+---
 
-Running the Project
-🏃 Start the development server:
+With Contracts
 
-```shell
-npm run dev
-```
+How to add hardhat: [Medium](https://medium.com/@wk0/integrating-smart-contracts-using-hardhat-with-nextjs-typescript-7206890b9cd8)
 
-🌐 Open your browser and navigate to http://localhost:3000 to see the project in action.
+[![Deploy with Vercel](https://vercel.com/button)](https://github.com/wk0/boilerplate-next/tree/with-contracts)

@@ -11,8 +11,6 @@ interface Props {
 }
 
 const ProductList: FC<Props> = ({ products }) => {
-  const [ choices, setChoices ] = useState<Choices>({})
-  const [ isLoading, setIsLoading ] = useState(false)
   const [sortBy, setSortBy] = useState<string>(''); // varsayılan olarak boş bir sıralama seçeneği
 
 
@@ -22,15 +20,18 @@ const ProductList: FC<Props> = ({ products }) => {
       onChange={(e) => setSortBy(e.target.value)}
     >
       <option value="">Sort by</option>
-      <option value="alphabetical">Alphabetical</option>
+      <option value="alphabeticalAsc">Alphabetical A-Z</option>
+      <option value="alphabeticalDesc">Alphabetical Z-A</option>
       <option value="priceAsc">Price: Low to High</option>
       <option value="priceDesc">Price: High to Low</option>
     </select>
   );
 
   const sortProducts = (products: Product[]): Product[] => {
-    if (sortBy === 'alphabetical') {
+    if (sortBy === 'alphabeticalAsc') {
       return products.sort((a, b) => a.name.localeCompare(b.name));
+    }else if (sortBy === 'alphabeticalDesc') {
+      return products.sort((a, b) => b.name.localeCompare(a.name));
     } else if (sortBy === 'priceAsc') {
       return products.sort((a, b) => a.price.value - b.price.value);
     } else if (sortBy === 'priceDesc') {
