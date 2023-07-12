@@ -1,7 +1,7 @@
 
 import { useApiProvider } from "@common"
 import { ApiFetcher } from "@common/types/api"
-import { ApiHooks, Hook } from "@common/types/hooks"
+import { ApiHooks } from "@common/types/hooks"
 import { MutationHook } from "@common/types/hooks"
 import useSWR from "swr"
 
@@ -16,7 +16,7 @@ export const useMutationHook = (
   const { fetcher } = useApiProvider()
 
   return hook.useHook({
-    fetch: (input: any) => {
+    fetch: (input) => {
       return hook.fetcher({
         input,
         fetch: fetcher,

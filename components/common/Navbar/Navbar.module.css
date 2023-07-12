@@ -1,3 +1,5 @@
+
+
 .root {
   @apply flex flex-row md:py-6;
 }
@@ -9,6 +11,7 @@
     @apply text-accents-9;
   }
 }
+
 
 .logo {
   @apply text-2xl font-bold;

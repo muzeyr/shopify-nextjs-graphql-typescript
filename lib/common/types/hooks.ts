@@ -2,7 +2,6 @@ import { SWRResponse } from "swr"
 import { ApiFetcher, ApiFetcherOptions } from "./api"
 
 export interface ApiHooks {
- 
 }
 
 export type MutationHookContext<Input, Output> = {

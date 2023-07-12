@@ -10,9 +10,8 @@ import {
 
 import { Product } from "@common/types/product"
 
-const defaultImage = ({edges}: {edges: Array<ImageEdge>}) => {
-  let randomImage = getRandomEdges(edges);
-  return randomImage;
+const defaultImage = ({edges}: {edges: Array<ImageEdge>}): string => {
+  return getRandomEdges(edges);
 }
 
 const normalizeProductImages = ({edges}: {edges: Array<ImageEdge>}) => 

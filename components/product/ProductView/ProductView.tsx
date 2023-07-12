@@ -37,12 +37,11 @@ const ProductView: FC<Props> = ({ product }) => {
         <div className={s.sidebar}>
          
           <div>
-          
-          
-            <h1 className={s.name}>
+         
+            <h1 className="text-2xl font-extrabold text-gray-900 mb-6">Product Detail</h1>
+            <h2 className={s.name}>
               {product.name}
-            </h1>
-           
+            </h2>
               {product.price.value}
               {` `}
               {product.price.currencyCode}

@@ -1,6 +1,7 @@
 
 
 import { FC } from "react"
+import s from "./Layout.module.css"
 import { Footer, Navbar } from "@components/common"
 import { ApiProvider } from "@lib"
 
@@ -8,7 +9,7 @@ const Layout: FC = ({children}) => {
 
   return (
     <ApiProvider>
-      <div>
+      <div className={s.root}>
         <Navbar />
        
         <main className="fit">
