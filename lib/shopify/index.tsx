@@ -10,11 +10,9 @@ import { shopifyHooks } from "./hooks"
 import { getConfig } from "./api/config"
 const config = getConfig()
 
-
 interface ShopifyApiProviderProps {
   children: ReactNode | ReactNode[]
 }
-
 export const ApiProvider = ({children}: ShopifyApiProviderProps) => {
 
   return (
