@@ -15,6 +15,5 @@ describe('Navigation', () => {
     cy.get('h1').contains('Product Detail')
   })
 })
-
 const asModule = {}
 export default asModule
