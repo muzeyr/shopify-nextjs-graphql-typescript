@@ -5,23 +5,18 @@ const createJestConfig = nextJest({
   dir: "./",
 });
 
-// Add any custom config to be passed to Jest
 const customJestConfig = {
   // Add more setup options before each test is run
-  setupFilesAfterEnv: ["@testing-library/jest-dom"], // if using TypeScript with a baseUrl set to the root directory then you need the below for alias' to work
-  moduleDirectories: ["node_modules", "<rootDir>/"],
+  setupFilesAfterEnv: ["@testing-library/jest-dom"],
   testEnvironment: "jest-environment-jsdom",
-  modulePathIgnorePatterns: ["cypress","<rootDir>/dist/"],
+  modulePathIgnorePatterns: ["cypress", "<rootDir>/dist/"],
   moduleNameMapper: {
-    "^@common": "<rootDir>lib/common",
-    "^@common/": "<rootDir>lib/common/*",
-    "^@lib": "<rootDir>lib/shopify",
-    "^@lib/*": "<rootDir>lib/shopify/*",
-    "^@components$": "<rootDir>/components/*",
-    "^@assets$": "<rootDir>/assets/*",
-    "^@shared$": "<rootDir>/shared/"
+    "^@common/(.*)$": "<rootDir>/lib/common/$1",
+    "^@lib/(.*)$": "<rootDir>/lib/shopify/$1",
+    "^@components/(.*)$": "<rootDir>/components/$1",
+    "^@assets/(.*)$": "<rootDir>/assets/$1",
+    "^@shared/(.*)$": "<rootDir>/shared/$1"
   }
-  
 };
 
-module.exports = createJestConfig(customJestConfig);
+export default customJestConfig;

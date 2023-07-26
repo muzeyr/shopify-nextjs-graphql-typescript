@@ -1,6 +1,5 @@
 
 import { FC, useState } from 'react'
-import { Container } from '@components/ui'
 import { Product } from '@common/types/product'
 import { ProductCard } from "@components/product"
 
