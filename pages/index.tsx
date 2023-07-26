@@ -12,7 +12,7 @@ import { Container } from "@components/ui"
 export async function getStaticProps() {
   const config = getConfig()
   //const productsWithSort = await getAllProductsWithSort(config, 'TITLE' ,false)
-  const products = await getAllProducts(config, 'PRICE', false)
+  const products = await getAllProducts(config, 'TITLE', true)
 
   return {
     props: {
@@ -27,8 +27,8 @@ export default function Home({
 }: InferGetStaticPropsType<typeof getStaticProps>) {
 
   const [sortType, setSortType] = useState<any>({val:'PRICE',reverse:false});
-  const [products, setProducts] = useState<Product[]>(initialProducts); // Use a state for products
-
+  const [products, setProducts] = useState<Product[]>(initialProducts); 
+  
   useEffect(() => {
     const getAllProductsWithSort = async (sortType: any) => {
       const config = getConfig();

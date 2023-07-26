@@ -8,9 +8,11 @@ const fetchApi = async <T>({
   query,
   variables
 }: ApiFetcherOptions): Promise<ApiFetcherResults<T>> => {
-  const apiUrl = API_URL ?? "";  // Varsayılan bir değer atayarak API_URL'in undefined olma durumunu ele alıyoruz
-  const storefrontToken = STOREFRONT_TOKEN ?? "";  // Varsayılan bir değer atayarak STOREFRONT_TOKEN'ın undefined olma durumunu ele alıyoruz
-
+  const apiUrl = API_URL ?? "";  
+  const storefrontToken = STOREFRONT_TOKEN ?? "";  
+  
+  console.log('variables', variables);
+  console.log('storefrontToken', storefrontToken);
   const res = await fetch(apiUrl, {
     method: "POST",
     headers: {
@@ -18,11 +20,9 @@ const fetchApi = async <T>({
       "X-Shopify-Storefront-Access-Token": storefrontToken
     },
     body: JSON.stringify({
-      query,
-      variables
+      query
     })
   })
-
   const { data, errors } = await res.json()
   if (errors) {
     throw new Error(errors[0]?.message ?? errors.message)
