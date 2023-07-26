@@ -13,10 +13,10 @@ type ReturnType = {
 
  
 const getAllProducts = async (config: ApiConfig,sortKey?: string, reverse?: boolean): Promise<Product[]> => {
-  console.log('sortKey',sortKey)
-  console.log('reverse',reverse)
+  
   const { data } = await config.fetch<ReturnType>({
-    query: getAllProductsQuery
+    query: getAllProductsQuery,
+    variables: { first: 250, sortBy:sortKey, reverse } 
   })
 
   const products = data.products.edges.map(({ node: product }) =>

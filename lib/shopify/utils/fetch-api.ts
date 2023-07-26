@@ -11,8 +11,6 @@ const fetchApi = async <T>({
   const apiUrl = API_URL ?? "";  
   const storefrontToken = STOREFRONT_TOKEN ?? "";  
   
-  console.log('variables', variables);
-  console.log('storefrontToken', storefrontToken);
   const res = await fetch(apiUrl, {
     method: "POST",
     headers: {
@@ -20,7 +18,8 @@ const fetchApi = async <T>({
       "X-Shopify-Storefront-Access-Token": storefrontToken
     },
     body: JSON.stringify({
-      query
+      query,
+      variables
     })
   })
   const { data, errors } = await res.json()

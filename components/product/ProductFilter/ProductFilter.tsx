@@ -14,14 +14,22 @@ const ProductFilter: React.FC<ProductFilterProps> = ({ onSortChange }) => {
   };
 
 
+  const sortingOptions = [
+    { label: 'Alphabetical A-Z', value: { val: 'TITLE', reverse: true } },
+    { label: 'Alphabetical Z-A', value: { val: 'TITLE', reverse: false } },
+    { label: 'Price: Low to High', value: { val: 'PRICE', reverse: true } },
+    { label: 'Price: High to Low', value: { val: 'PRICE', reverse: false } },
+  ];
   const renderSortingOptions = () => (
     <select
       onChange={handleSortChange}
     >
       <option value="">Sort by</option>
-      <option value="alphabetical">Alphabetical</option>
-      <option value="{val:PRICE,reverse:true}">Price: Low to High</option>
-      <option value="{val:PRICE,reverse:false}">Price: High to Low</option>
+      {sortingOptions.map((option, index) => (
+      <option key={index} value={JSON.stringify(option.value)}>
+        {option.label}
+      </option>
+    ))}
     </select>
   );
 
