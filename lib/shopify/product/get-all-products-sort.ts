@@ -11,13 +11,13 @@ type ReturnType = {
   products: ProductConnection
 }
 
+
 //const getAllProducts = async (config: ApiConfig): Promise<Product[]> => {
 const getAllProducts = async (config: ApiConfig,sortKey?: string, reverse?: boolean): Promise<Product[]> => {
   console.log(config);
     const { data } = await config.fetch<ReturnType>({
     query: getAllProductsQuery
   })
-  console.log(data);
 
   const products = data.products.edges.map(({ node: product }) =>
     normalizeProduct(product)

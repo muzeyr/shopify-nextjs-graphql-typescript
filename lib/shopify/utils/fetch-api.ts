@@ -8,9 +8,10 @@ const fetchApi = async <T>({
   query,
   variables
 }: ApiFetcherOptions): Promise<ApiFetcherResults<T>> => {
-  const apiUrl = API_URL ?? "";  // Varsayılan bir değer atayarak API_URL'in undefined olma durumunu ele alıyoruz
-  const storefrontToken = STOREFRONT_TOKEN ?? "";  // Varsayılan bir değer atayarak STOREFRONT_TOKEN'ın undefined olma durumunu ele alıyoruz
-
+  //const apiUrl = API_URL ?? "";  
+  const apiUrl = "http://localhost:3000/api/forwardRequest"; 
+  const storefrontToken = STOREFRONT_TOKEN ?? "";  
+  
   const res = await fetch(apiUrl, {
     method: "POST",
     headers: {
