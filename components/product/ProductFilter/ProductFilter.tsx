@@ -24,7 +24,7 @@ const ProductFilter: React.FC<ProductFilterProps> = ({ onSortChange }) => {
     <select
       onChange={handleSortChange}
     >
-      <option value="">Sort by</option>
+      <option id="sortingOptions" value="">Sort by</option>
       {sortingOptions.map((option, index) => (
       <option key={index} value={JSON.stringify(option.value)}>
         {option.label}
