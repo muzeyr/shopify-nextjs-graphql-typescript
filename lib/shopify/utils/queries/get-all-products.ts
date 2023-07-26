@@ -1,4 +1,3 @@
-
 const productConnection = `
   pageInfo {
     hasNextPage
@@ -33,14 +32,15 @@ const productConnection = `
       }
     }
   }
-`
+`;
+
 
 const getAllProductsQuery = `
-  query getAllProducts($first: Int = 250) {
-    products(first: $first) {
+  query getAllProducts($first: Int = 250, $sortBy: ProductSortKeys, $reverse: Boolean) {
+    products(first: $first, sortKey: $sortBy, reverse: $reverse) {
       ${productConnection}
     }
   }
-`
+`;
 
-export default getAllProductsQuery
+export default getAllProductsQuery;
